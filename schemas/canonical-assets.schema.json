@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/LUNCPumpfun/asset-registry/main/schemas/canonical-assets.schema.json",
+  "title": "LSF canonical assets",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "assets"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "symbol", "name", "logo", "lifecycle"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "symbol": { "type": "string", "minLength": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "logo": { "type": "string", "minLength": 1 },
+          "lifecycle": { "enum": ["active", "deprecated"] }
+        }
+      }
+    }
+  }
+}

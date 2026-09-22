@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    { "id": "lunc", "symbol": "LUNC", "name": "Terra Classic", "logo": "images/assets/lunc.svg", "lifecycle": "active" },
+    { "id": "ustc", "symbol": "USTC", "name": "Terra Classic USD", "logo": "images/assets/ustc.png", "lifecycle": "active" },
+    { "id": "usdc", "symbol": "USDC", "name": "USD Coin", "logo": "images/assets/usdc.svg", "lifecycle": "active" },
+    { "id": "juris", "symbol": "JURIS", "name": "Juris", "logo": "images/assets/juris.svg", "lifecycle": "active" },
+    { "id": "terra-token", "symbol": "TERRA", "name": "Terra", "logo": "images/assets/terra.png", "lifecycle": "active" },
+    { "id": "blame", "symbol": "BLAME", "name": "#blamefrag", "logo": "images/assets/blame.jpg", "lifecycle": "active" },
+    { "id": "btc", "symbol": "BTC", "name": "Bitcoin", "logo": "images/assets/btc.svg", "lifecycle": "active" },
+    { "id": "quid", "symbol": "QUID", "name": "Liquid", "logo": "images/assets/quid.jpg", "lifecycle": "active" },
+    { "id": "luncpump", "symbol": "LUNCPUMP", "name": "LUNCSwapFun", "logo": "images/assets/luncpump.jpg", "lifecycle": "active" },
+    { "id": "eth", "symbol": "ETH", "name": "Ether", "logo": "images/assets/eth.svg", "lifecycle": "active" },
+    { "id": "bnb", "symbol": "BNB", "name": "BNB", "logo": "images/assets/bnb.svg", "lifecycle": "active" },
+    { "id": "sol", "symbol": "SOL", "name": "Solana", "logo": "images/assets/solana.svg", "lifecycle": "active" },
+    { "id": "inj", "symbol": "INJ", "name": "Injective", "logo": "images/assets/injective.svg", "lifecycle": "active" },
+    { "id": "osmo", "symbol": "OSMO", "name": "Osmosis", "logo": "images/assets/osmosis.svg", "lifecycle": "active" }
+  ]
+}

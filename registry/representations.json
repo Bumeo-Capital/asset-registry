@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "representations": [
+    {
+      "id": "terra-classic/uluna",
+      "canonicalAsset": "lunc",
+      "chain": "terra-classic",
+      "standard": "cosmos-native",
+      "identifier": "uluna",
+      "decimals": 6,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "required",
+      "sourceIds": ["lsf-dex-live-2026-09-22", "product-owner-core-2026-09-22"]
+    },
+    {
+      "id": "terra-classic/uusd",
+      "canonicalAsset": "ustc",
+      "chain": "terra-classic",
+      "standard": "cosmos-native",
+      "identifier": "uusd",
+      "decimals": 6,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "required",
+      "sourceIds": ["product-owner-core-2026-09-22"]
+    },
+    {
+      "id": "noble/uusdc",
+      "canonicalAsset": "usdc",
+      "chain": "noble",
+      "standard": "cosmos-native",
+      "identifier": "uusdc",
+      "decimals": 6,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "hidden",
+      "sourceIds": ["terra-classic-onchain-2026-09-22"]
+    },
+    {
+      "id": "terra-classic/ibc-noble-usdc",
+      "canonicalAsset": "usdc",
+      "chain": "terra-classic",
+      "standard": "ibc",
+      "identifier": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5",
+      "decimals": 6,
+      "provenance": [
+        {
+          "originRepresentation": "noble/uusdc",
+          "transportRef": "ibc/noble-terra-classic/channel-149-channel-113"
+        }
+      ],
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "default",
+      "sourceIds": ["lsf-dex-live-2026-09-22", "terra-classic-onchain-2026-09-22"]
+    },
+    {
+      "id": "terra-classic/cw20-juris",
+      "canonicalAsset": "juris",
+      "chain": "terra-classic",
+      "standard": "cw20",
+      "identifier": "terra1vhgq25vwuhdhn9xjll0rhl2s67jzw78a4g2t78y5kz89q9lsdskq2pxcj2",
+      "decimals": 6,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "default",
+      "sourceIds": ["lsf-dex-live-2026-09-22"]
+    },
+    {
+      "id": "terra-classic/cw20-terra",
+      "canonicalAsset": "terra-token",
+      "chain": "terra-classic",
+      "standard": "cw20",
+      "identifier": "terra1ex0hjv3wurhj4wgup4jzlzaqj4av6xqd8le4etml7rg9rs207y4s8cdvrp",
+      "decimals": 6,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "default",
+      "sourceIds": ["lsf-dex-live-2026-09-22"]
+    },
+    {
+      "id": "terra-classic/cw20-blame",
+      "canonicalAsset": "blame",
+      "chain": "terra-classic",
+      "standard": "cw20",
+      "identifier": "terra1j9tjp5terr8n209ng8ys68rfrs8x76lrycet5rsc55yultyh9gfqeaa4wq",
+      "decimals": 6,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "default",
+      "sourceIds": ["lsf-dex-live-2026-09-22"]
+    },
+    {
+      "id": "osmosis/allbtc",
+      "canonicalAsset": "btc",
+      "chain": "osmosis",
+      "standard": "cosmos-tokenfactory",
+      "identifier": "factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC",
+      "decimals": 8,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "hidden",
+      "sourceIds": ["terra-classic-onchain-2026-09-22"]
+    },
+    {
+      "id": "terra-classic/ibc-osmosis-allbtc",
+      "canonicalAsset": "btc",
+      "chain": "terra-classic",
+      "standard": "ibc",
+      "identifier": "ibc/2E13104D0924DDB574E98CF01E1FD2D8913779BCB5B514B6468C6EC6037A15DC",
+      "decimals": 8,
+      "provenance": [
+        {
+          "originRepresentation": "osmosis/allbtc",
+          "transportRef": "ibc/osmosis-terra-classic/channel-72-channel-1"
+        }
+      ],
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "default",
+      "sourceIds": ["lsf-dex-live-2026-09-22", "terra-classic-onchain-2026-09-22"]
+    },
+    {
+      "id": "terra-classic/cw20-quid",
+      "canonicalAsset": "quid",
+      "chain": "terra-classic",
+      "standard": "cw20",
+      "identifier": "terra1zmsv8khmsrz2xj8zuhu7r7yruf5dfsyhtqyqf5lf92f2uvz6lf9sx5sr79",
+      "decimals": 6,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "default",
+      "sourceIds": ["lsf-dex-live-2026-09-22"]
+    },
+    {
+      "id": "terra-classic/cw20-luncpump",
+      "canonicalAsset": "luncpump",
+      "chain": "terra-classic",
+      "standard": "cw20",
+      "identifier": "terra12zzn39pm6dgp4uyshdh0n5px2havd6ulkllas4t8ua4sktx9f7esthllct",
+      "decimals": 6,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "default",
+      "sourceIds": ["lsf-dex-live-2026-09-22"]
+    },
+    {
+      "id": "ethereum/native-eth",
+      "canonicalAsset": "eth",
+      "chain": "ethereum",
+      "standard": "evm-native",
+      "identifier": "native",
+      "decimals": 18,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "required",
+      "sourceIds": ["lsf-wallet-pushed-2026-09-22", "product-owner-core-2026-09-22"]
+    },
+    {
+      "id": "bsc/native-bnb",
+      "canonicalAsset": "bnb",
+      "chain": "bsc",
+      "standard": "evm-native",
+      "identifier": "native",
+      "decimals": 18,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "required",
+      "sourceIds": ["lsf-wallet-pushed-2026-09-22", "product-owner-core-2026-09-22"]
+    },
+    {
+      "id": "solana/native-sol",
+      "canonicalAsset": "sol",
+      "chain": "solana",
+      "standard": "solana-native",
+      "identifier": "native",
+      "decimals": 9,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "required",
+      "sourceIds": ["lsf-wallet-pushed-2026-09-22", "product-owner-core-2026-09-22"]
+    },
+    {
+      "id": "injective/inj",
+      "canonicalAsset": "inj",
+      "chain": "injective",
+      "standard": "cosmos-native",
+      "identifier": "inj",
+      "decimals": 18,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "required",
+      "sourceIds": ["lsf-wallet-pushed-2026-09-22", "product-owner-core-2026-09-22"]
+    },
+    {
+      "id": "osmosis/uosmo",
+      "canonicalAsset": "osmo",
+      "chain": "osmosis",
+      "standard": "cosmos-native",
+      "identifier": "uosmo",
+      "decimals": 6,
+      "verification": "verified",
+      "lifecycle": "active",
+      "visibility": "required",
+      "sourceIds": ["lsf-wallet-pushed-2026-09-22", "product-owner-core-2026-09-22"]
+    }
+  ]
+}

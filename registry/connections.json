@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "connections": [
+    {
+      "id": "ibc/noble-terra-classic/channel-149-channel-113",
+      "protocol": "ibc",
+      "lifecycle": "active",
+      "endpoints": [
+        {
+          "chain": "noble",
+          "endpointType": "ibc",
+          "port": "transfer",
+          "channel": "channel-149",
+          "connection": "connection-156",
+          "client": "07-tendermint-162"
+        },
+        {
+          "chain": "terra-classic",
+          "endpointType": "ibc",
+          "port": "transfer",
+          "channel": "channel-113",
+          "connection": "connection-164",
+          "client": "07-tendermint-274"
+        }
+      ],
+      "assetMappings": [
+        {
+          "sourceRepresentation": "noble/uusdc",
+          "destinationRepresentation": "terra-classic/ibc-noble-usdc"
+        }
+      ],
+      "evidenceUrls": [
+        "https://terra-classic-lcd.publicnode.com/cosmos/bank/v1beta1/denoms_metadata/ibc%2F0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5",
+        "https://terra-classic-lcd.publicnode.com/ibc/core/channel/v1/channels/channel-113/ports/transfer",
+        "https://terra-classic-lcd.publicnode.com/ibc/core/connection/v1/connections/connection-164"
+      ],
+      "sourceIds": ["terra-classic-onchain-2026-09-22"]
+    },
+    {
+      "id": "ibc/osmosis-terra-classic/channel-72-channel-1",
+      "protocol": "ibc",
+      "lifecycle": "active",
+      "endpoints": [
+        {
+          "chain": "osmosis",
+          "endpointType": "ibc",
+          "port": "transfer",
+          "channel": "channel-72",
+          "connection": "connection-1215",
+          "client": "07-tendermint-1549"
+        },
+        {
+          "chain": "terra-classic",
+          "endpointType": "ibc",
+          "port": "transfer",
+          "channel": "channel-1",
+          "connection": "connection-11",
+          "client": "07-tendermint-12"
+        }
+      ],
+      "assetMappings": [
+        {
+          "sourceRepresentation": "osmosis/allbtc",
+          "destinationRepresentation": "terra-classic/ibc-osmosis-allbtc"
+        }
+      ],
+      "evidenceUrls": [
+        "https://terra-classic-lcd.publicnode.com/cosmos/bank/v1beta1/denoms_metadata/ibc%2F2E13104D0924DDB574E98CF01E1FD2D8913779BCB5B514B6468C6EC6037A15DC",
+        "https://terra-classic-lcd.publicnode.com/ibc/core/channel/v1/channels/channel-1/ports/transfer",
+        "https://terra-classic-lcd.publicnode.com/ibc/core/connection/v1/connections/connection-11"
+      ],
+      "sourceIds": ["terra-classic-onchain-2026-09-22"]
+    }
+  ]
+}

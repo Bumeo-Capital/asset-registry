@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "registryVersion": "0.1.0",
+  "status": "initial",
+  "updatedAt": "2026-09-22",
+  "files": [
+    "registry/chains.json",
+    "registry/canonical-assets.json",
+    "registry/representations.json",
+    "registry/connections.json"
+  ],
+  "sources": [
+    {
+      "id": "lsf-dex-live-2026-09-22",
+      "kind": "api-snapshot",
+      "url": "https://api.luncswap.fun/v1/tokens",
+      "asOf": "2026-09-22T12:53:21.774Z",
+      "repository": "https://github.com/LUNCPumpfun/swap-frontend",
+      "commit": "3fe28e8ae9c944953007db53165624faf75ff0d3",
+      "tokenCount": 8,
+      "representationIds": [
+        "terra-classic/uluna",
+        "terra-classic/ibc-noble-usdc",
+        "terra-classic/cw20-juris",
+        "terra-classic/cw20-terra",
+        "terra-classic/cw20-blame",
+        "terra-classic/ibc-osmosis-allbtc",
+        "terra-classic/cw20-quid",
+        "terra-classic/cw20-luncpump"
+      ]
+    },
+    {
+      "id": "lsf-wallet-pushed-2026-09-22",
+      "kind": "repository-snapshot",
+      "repository": "https://github.com/LUNCPumpfun/swap-frontend",
+      "commit": "3fe28e8ae9c944953007db53165624faf75ff0d3"
+    },
+    {
+      "id": "terra-classic-onchain-2026-09-22",
+      "kind": "onchain-query",
+      "url": "https://terra-classic-lcd.publicnode.com",
+      "asOf": "2026-09-22"
+    },
+    {
+      "id": "product-owner-core-2026-09-22",
+      "kind": "product-decision",
+      "asOf": "2026-09-22",
+      "note": "LUNC, USTC, and native gas assets form the initial non-legacy wallet baseline."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "chains": [
+    {
+      "id": "terra-classic",
+      "name": "Terra Classic",
+      "family": "cosmos",
+      "network": "mainnet",
+      "caip2": "cosmos:columbus-5",
+      "nativeRepresentation": "terra-classic/uluna",
+      "logo": "images/chains/terra-classic.png",
+      "lifecycle": "active",
+      "sourceIds": ["lsf-dex-live-2026-09-22", "product-owner-core-2026-09-22"]
+    },
+    {
+      "id": "noble",
+      "name": "Noble",
+      "family": "cosmos",
+      "network": "mainnet",
+      "caip2": "cosmos:noble-1",
+      "nativeRepresentation": "noble/uusdc",
+      "logo": "images/chains/noble.svg",
+      "lifecycle": "active",
+      "sourceIds": ["terra-classic-onchain-2026-09-22"]
+    },
+    {
+      "id": "osmosis",
+      "name": "Osmosis",
+      "family": "cosmos",
+      "network": "mainnet",
+      "caip2": "cosmos:osmosis-1",
+      "nativeRepresentation": "osmosis/uosmo",
+      "logo": "images/chains/osmosis.svg",
+      "lifecycle": "active",
+      "sourceIds": ["lsf-wallet-pushed-2026-09-22", "product-owner-core-2026-09-22"]
+    },
+    {
+      "id": "injective",
+      "name": "Injective",
+      "family": "cosmos",
+      "network": "mainnet",
+      "caip2": "cosmos:injective-1",
+      "nativeRepresentation": "injective/inj",
+      "logo": "images/chains/injective.svg",
+      "lifecycle": "active",
+      "sourceIds": ["lsf-wallet-pushed-2026-09-22", "product-owner-core-2026-09-22"]
+    },
+    {
+      "id": "ethereum",
+      "name": "Ethereum",
+      "family": "evm",
+      "network": "mainnet",
+      "caip2": "eip155:1",
+      "nativeRepresentation": "ethereum/native-eth",
+      "logo": "images/chains/ethereum.svg",
+      "lifecycle": "active",
+      "sourceIds": ["lsf-wallet-pushed-2026-09-22", "product-owner-core-2026-09-22"]
+    },
+    {
+      "id": "bsc",
+      "name": "BNB Smart Chain",
+      "family": "evm",
+      "network": "mainnet",
+      "caip2": "eip155:56",
+      "nativeRepresentation": "bsc/native-bnb",
+      "logo": "images/chains/bsc.svg",
+      "lifecycle": "active",
+      "sourceIds": ["lsf-wallet-pushed-2026-09-22", "product-owner-core-2026-09-22"]
+    },
+    {
+      "id": "solana",
+      "name": "Solana",
+      "family": "solana",
+      "network": "mainnet",
+      "caip2": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+      "nativeRepresentation": "solana/native-sol",
+      "logo": "images/chains/solana.svg",
+      "lifecycle": "active",
+      "sourceIds": ["lsf-wallet-pushed-2026-09-22", "product-owner-core-2026-09-22"]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/LUNCPumpfun/asset-registry/main/schemas/chains.schema.json",
+  "title": "LSF chains",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "chains"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "chains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "family", "network", "caip2", "nativeRepresentation", "logo", "lifecycle", "sourceIds"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "name": { "type": "string", "minLength": 1 },
+          "family": { "enum": ["cosmos", "evm", "solana"] },
+          "network": { "enum": ["mainnet", "testnet"] },
+          "caip2": { "type": "string", "minLength": 3 },
+          "nativeRepresentation": { "type": ["string", "null"] },
+          "logo": { "type": "string", "minLength": 1 },
+          "lifecycle": { "enum": ["active", "deprecated"] },
+          "sourceIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

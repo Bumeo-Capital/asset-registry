@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "registryVersion": "0.1.0",
+  "registryVersion": "0.2.0",
   "status": "initial",
-  "updatedAt": "2026-09-22",
+  "updatedAt": "2026-09-25",
   "files": [
     "registry/chains.json",
     "registry/canonical-assets.json",
@@ -10,6 +10,19 @@
     "registry/connections.json"
   ],
   "sources": [
+    {
+      "id": "wspyx-onchain-2026-09-22",
+      "kind": "onchain-query",
+      "asOf": "2026-09-22",
+      "url": "https://terra-classic-lcd.publicnode.com",
+      "note": "Public Terra LCD and Ethereum RPC observations are preserved in docs/evidence/wspyx-2026-09-22.json; interpretation and limitations are in docs/WSPYX.md. Identity and reciprocal router enrollment verified; transfer execution and relayer coverage not verified."
+    },
+    {
+      "id": "product-owner-wspyx-2026-09-22",
+      "kind": "product-decision",
+      "asOf": "2026-09-22",
+      "note": "Owner requested inclusion of the SP500 xStock bridged to Terra Classic. Exact wSPYx identity resolved from deployment records and public chain queries; optional visibility is the initial curation choice."
+    },
     {
       "id": "lsf-dex-live-2026-09-22",
       "kind": "api-snapshot",
@@ -46,6 +59,31 @@
       "kind": "product-decision",
       "asOf": "2026-09-22",
       "note": "LUNC, USTC, and native gas assets form the initial non-legacy wallet baseline."
+    },
+    {
+      "id": "injective-usdc-onchain-2026-09-22",
+      "kind": "onchain-query",
+      "url": "https://sentry.lcd.injective.network",
+      "asOf": "2026-09-22",
+      "note": "Public bank metadata, reciprocal IBC channels/connections and client chain identities preserved in docs/evidence/injective-usdc-2026-09-22.json. Six decimals verified on Injective; Terra denom hash independently recomputed. Circle lists the underlying ERC-20 at https://developers.circle.com/stablecoins/usdc-contract-addresses."
+    },
+    {
+      "id": "product-owner-injective-usdc-2026-09-22",
+      "kind": "product-decision",
+      "asOf": "2026-09-22",
+      "note": "Owner requested equal registry treatment with Noble USDC: default Terra Classic IBC representation and hidden source-chain representation under canonical USDC."
+    },
+    {
+      "id": "multichain-onchain-2026-09-25",
+      "kind": "onchain-query",
+      "asOf": "2026-09-25",
+      "note": "Exact traces, reciprocal IBC channels/clients and EVM token metadata/router enrollment in docs/evidence/multichain-2026-09-25.json; see docs/MULTICHAIN.md."
+    },
+    {
+      "id": "product-owner-multichain-2026-09-25",
+      "kind": "product-decision",
+      "asOf": "2026-09-25",
+      "note": "Owner requested publishing LSF wallet multichain representations in Bumeo registry so canonical groups match LSF Light. The nine listed representations and Injective USDC are default-visible; provenance-only Noble USDC/allBTC/wSPYx collateral remain hidden."
     }
   ]
 }

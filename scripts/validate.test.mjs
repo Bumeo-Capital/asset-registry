@@ -20,9 +20,9 @@ const temporaryRegistry = () => {
 test('validates the checked-in registry and DEX snapshot coverage', () => {
   assert.deepEqual(validateRegistry(ROOT), {
     chains: 7,
-    canonicalAssets: 14,
-    representations: 16,
-    connections: 2,
+    canonicalAssets: 15,
+    representations: 29,
+    connections: 9,
     dexRepresentations: 8
   });
 });
@@ -58,4 +58,17 @@ test('rejects registry paths that escape the repository', (context) => {
   writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`);
 
   assert.throws(() => validateRegistry(root), /path escapes repository root/);
+});
+
+test('wallet canonical groups retain exact locations and provenance-only exclusions', () => {
+  const { representations } = JSON.parse(readFileSync(join(ROOT, 'registry/representations.json'), 'utf8'));
+  for (const [canonical, networks, count] of [['lunc', 4, 4], ['ustc', 4, 4], ['juris', 2, 2], ['osmo', 2, 2], ['inj', 2, 2], ['usdc', 2, 3]]) {
+    const group = representations.filter((entry) => entry.canonicalAsset === canonical && entry.visibility !== 'hidden');
+    assert.equal(group.length, count, canonical);
+    assert.equal(new Set(group.map((entry) => entry.chain)).size, networks, canonical);
+    assert(group.every((entry) => entry.verification === 'verified' && entry.lifecycle === 'active'));
+  }
+  for (const id of ['noble/uusdc', 'osmosis/allbtc', 'ethereum/erc20-wspyx-v2']) {
+    assert.equal(representations.find((entry) => entry.id === id).visibility, 'hidden');
+  }
 });

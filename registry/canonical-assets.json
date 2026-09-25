@@ -14,6 +14,7 @@
     { "id": "bnb", "symbol": "BNB", "name": "BNB", "logo": "images/assets/bnb.svg", "lifecycle": "active" },
     { "id": "sol", "symbol": "SOL", "name": "Solana", "logo": "images/assets/solana.svg", "lifecycle": "active" },
     { "id": "inj", "symbol": "INJ", "name": "Injective", "logo": "images/assets/injective.svg", "lifecycle": "active" },
-    { "id": "osmo", "symbol": "OSMO", "name": "Osmosis", "logo": "images/assets/osmosis.svg", "lifecycle": "active" }
+    { "id": "osmo", "symbol": "OSMO", "name": "Osmosis", "logo": "images/assets/osmosis.svg", "lifecycle": "active" },
+    { "id": "wspyx", "symbol": "wSPYx", "name": "Wrapped SP500 xStock", "logo": "images/assets/wspyx.png", "lifecycle": "active" }
   ]
 }

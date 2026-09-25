@@ -1,0 +1,338 @@
+{
+  "observedAt": "2026-09-22T21:03:59.636390+00:00",
+  "denomTrace": "transfer/channel-143/erc20:0xa00C59fF5a080D2b954d0c75e46E22a0c371235a",
+  "computedDenom": "ibc/F52112392095A6D6D1B17EF1FE19BE0B39B2A79B8A2B2F55CD721FC7DBF5081F",
+  "queries": [
+    {
+      "name": "terra-channel",
+      "url": "https://terra-classic-lcd.publicnode.com/ibc/core/channel/v1/channels/channel-143/ports/transfer",
+      "response": {
+        "channel": {
+          "state": "STATE_OPEN",
+          "ordering": "ORDER_UNORDERED",
+          "counterparty": {
+            "port_id": "transfer",
+            "channel_id": "channel-497"
+          },
+          "connection_hops": [
+            "connection-182"
+          ],
+          "version": "ics20-1"
+        },
+        "proof": null,
+        "proof_height": {
+          "revision_number": "5",
+          "revision_height": "30518757"
+        }
+      }
+    },
+    {
+      "name": "terra-connection",
+      "url": "https://terra-classic-lcd.publicnode.com/ibc/core/connection/v1/connections/connection-182",
+      "response": {
+        "connection": {
+          "client_id": "07-tendermint-293",
+          "versions": [
+            {
+              "identifier": "1",
+              "features": [
+                "ORDER_ORDERED",
+                "ORDER_UNORDERED"
+              ]
+            }
+          ],
+          "state": "STATE_OPEN",
+          "counterparty": {
+            "client_id": "07-tendermint-357",
+            "connection_id": "connection-376",
+            "prefix": {
+              "key_prefix": "aWJj"
+            }
+          },
+          "delay_period": "0"
+        },
+        "proof": null,
+        "proof_height": {
+          "revision_number": "5",
+          "revision_height": "30518757"
+        }
+      }
+    },
+    {
+      "name": "injective-channel",
+      "url": "https://sentry.lcd.injective.network/ibc/core/channel/v1/channels/channel-497/ports/transfer",
+      "response": {
+        "channel": {
+          "state": "STATE_OPEN",
+          "ordering": "ORDER_UNORDERED",
+          "counterparty": {
+            "port_id": "transfer",
+            "channel_id": "channel-143"
+          },
+          "connection_hops": [
+            "connection-376"
+          ],
+          "version": "ics20-1",
+          "upgrade_sequence": "0"
+        },
+        "proof": null,
+        "proof_height": {
+          "revision_number": "1",
+          "revision_height": "184135759"
+        }
+      }
+    },
+    {
+      "name": "metadata",
+      "url": "https://sentry.lcd.injective.network/cosmos/bank/v1beta1/denoms_metadata/erc20%3A0xa00C59fF5a080D2b954d0c75e46E22a0c371235a",
+      "response": {
+        "metadata": {
+          "description": "",
+          "denom_units": [
+            {
+              "denom": "erc20:0xa00C59fF5a080D2b954d0c75e46E22a0c371235a",
+              "exponent": 0,
+              "aliases": []
+            },
+            {
+              "denom": "USDC",
+              "exponent": 6,
+              "aliases": [
+                "USDC"
+              ]
+            }
+          ],
+          "base": "erc20:0xa00C59fF5a080D2b954d0c75e46E22a0c371235a",
+          "display": "USDC",
+          "name": "USDC",
+          "symbol": "USDC",
+          "uri": "",
+          "uri_hash": "",
+          "decimals": 6
+        }
+      }
+    },
+    {
+      "name": "injective-connection",
+      "url": "https://sentry.lcd.injective.network/ibc/core/connection/v1/connections/connection-376",
+      "response": {
+        "connection": {
+          "client_id": "07-tendermint-357",
+          "versions": [
+            {
+              "identifier": "1",
+              "features": [
+                "ORDER_ORDERED",
+                "ORDER_UNORDERED"
+              ]
+            }
+          ],
+          "state": "STATE_OPEN",
+          "counterparty": {
+            "client_id": "07-tendermint-293",
+            "connection_id": "connection-182",
+            "prefix": {
+              "key_prefix": "aWJj"
+            }
+          },
+          "delay_period": "0"
+        },
+        "proof": null,
+        "proof_height": {
+          "revision_number": "1",
+          "revision_height": "184135772"
+        }
+      }
+    },
+    {
+      "name": "terra-client",
+      "url": "https://terra-classic-lcd.publicnode.com/ibc/core/client/v1/client_states/07-tendermint-293",
+      "response": {
+        "client_state": {
+          "@type": "/ibc.lightclients.tendermint.v1.ClientState",
+          "chain_id": "injective-1",
+          "trust_level": {
+            "numerator": "2",
+            "denominator": "3"
+          },
+          "trusting_period": "1209600s",
+          "unbonding_period": "1814400s",
+          "max_clock_drift": "50s",
+          "frozen_height": {
+            "revision_number": "0",
+            "revision_height": "0"
+          },
+          "latest_height": {
+            "revision_number": "1",
+            "revision_height": "184047246"
+          },
+          "proof_specs": [
+            {
+              "leaf_spec": {
+                "hash": "SHA256",
+                "prehash_key": "NO_HASH",
+                "prehash_value": "SHA256",
+                "length": "VAR_PROTO",
+                "prefix": "AA=="
+              },
+              "inner_spec": {
+                "child_order": [
+                  0,
+                  1
+                ],
+                "child_size": 33,
+                "min_prefix_length": 4,
+                "max_prefix_length": 12,
+                "empty_child": null,
+                "hash": "SHA256"
+              },
+              "max_depth": 0,
+              "min_depth": 0,
+              "prehash_key_before_comparison": false
+            },
+            {
+              "leaf_spec": {
+                "hash": "SHA256",
+                "prehash_key": "NO_HASH",
+                "prehash_value": "SHA256",
+                "length": "VAR_PROTO",
+                "prefix": "AA=="
+              },
+              "inner_spec": {
+                "child_order": [
+                  0,
+                  1
+                ],
+                "child_size": 32,
+                "min_prefix_length": 1,
+                "max_prefix_length": 1,
+                "empty_child": null,
+                "hash": "SHA256"
+              },
+              "max_depth": 0,
+              "min_depth": 0,
+              "prehash_key_before_comparison": false
+            }
+          ],
+          "upgrade_path": [
+            "upgrade",
+            "upgradedIBCState"
+          ],
+          "allow_update_after_expiry": true,
+          "allow_update_after_misbehaviour": true
+        },
+        "proof": null,
+        "proof_height": {
+          "revision_number": "5",
+          "revision_height": "30518758"
+        }
+      }
+    },
+    {
+      "name": "injective-client",
+      "url": "https://sentry.lcd.injective.network/ibc/core/client/v1/client_states/07-tendermint-357",
+      "response": {
+        "client_state": {
+          "@type": "/ibc.lightclients.tendermint.v1.ClientState",
+          "chain_id": "columbus-5",
+          "trust_level": {
+            "numerator": "2",
+            "denominator": "3"
+          },
+          "trusting_period": "1209600s",
+          "unbonding_period": "1814400s",
+          "max_clock_drift": "50s",
+          "frozen_height": {
+            "revision_number": "0",
+            "revision_height": "0"
+          },
+          "latest_height": {
+            "revision_number": "5",
+            "revision_height": "30514503"
+          },
+          "proof_specs": [
+            {
+              "leaf_spec": {
+                "hash": "SHA256",
+                "prehash_key": "NO_HASH",
+                "prehash_value": "SHA256",
+                "length": "VAR_PROTO",
+                "prefix": "AA=="
+              },
+              "inner_spec": {
+                "child_order": [
+                  0,
+                  1
+                ],
+                "child_size": 33,
+                "min_prefix_length": 4,
+                "max_prefix_length": 12,
+                "empty_child": null,
+                "hash": "SHA256"
+              },
+              "max_depth": 0,
+              "min_depth": 0,
+              "prehash_key_before_comparison": false
+            },
+            {
+              "leaf_spec": {
+                "hash": "SHA256",
+                "prehash_key": "NO_HASH",
+                "prehash_value": "SHA256",
+                "length": "VAR_PROTO",
+                "prefix": "AA=="
+              },
+              "inner_spec": {
+                "child_order": [
+                  0,
+                  1
+                ],
+                "child_size": 32,
+                "min_prefix_length": 1,
+                "max_prefix_length": 1,
+                "empty_child": null,
+                "hash": "SHA256"
+              },
+              "max_depth": 0,
+              "min_depth": 0,
+              "prehash_key_before_comparison": false
+            }
+          ],
+          "upgrade_path": [
+            "upgrade",
+            "upgradedIBCState"
+          ],
+          "allow_update_after_expiry": true,
+          "allow_update_after_misbehaviour": true
+        },
+        "proof": null,
+        "proof_height": {
+          "revision_number": "1",
+          "revision_height": "184135772"
+        }
+      }
+    },
+    {
+      "name": "terra-metadata",
+      "url": "https://terra-classic-lcd.publicnode.com/cosmos/bank/v1beta1/denoms_metadata/ibc%2FF52112392095A6D6D1B17EF1FE19BE0B39B2A79B8A2B2F55CD721FC7DBF5081F",
+      "response": {
+        "metadata": {
+          "description": "IBC token from transfer/channel-143/erc20:0xa00C59fF5a080D2b954d0c75e46E22a0c371235a",
+          "denom_units": [
+            {
+              "denom": "erc20:0xa00C59fF5a080D2b954d0c75e46E22a0c371235a",
+              "exponent": 0,
+              "aliases": []
+            }
+          ],
+          "base": "ibc/F52112392095A6D6D1B17EF1FE19BE0B39B2A79B8A2B2F55CD721FC7DBF5081F",
+          "display": "transfer/channel-143/erc20:0xa00C59fF5a080D2b954d0c75e46E22a0c371235a",
+          "name": "transfer/channel-143/erc20:0xa00C59fF5a080D2b954d0c75e46E22a0c371235a IBC token",
+          "symbol": "ERC20:0XA00C59FF5A080D2B954D0C75E46E22A0C371235A",
+          "uri": "",
+          "uri_hash": ""
+        }
+      }
+    }
+  ]
+}

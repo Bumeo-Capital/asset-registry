@@ -64,9 +64,17 @@ The first catalog contains:
 - provenance-only Noble USDC and Osmosis allBTC representations required to explain the two DEX
   IBC assets.
 
-The discovered wallet-only IBC and Hyperlane assets are listed for product-owner approval in
-[`docs/WALLET_ASSET_REVIEW.md`](docs/WALLET_ASSET_REVIEW.md). They are deliberately not active
-registry entries.
+The approved five-network wallet representations are active; see
+[`docs/MULTICHAIN.md`](docs/MULTICHAIN.md) for exact scope and public evidence.
+Remaining Solana bridge candidates are listed in [`docs/WALLET_ASSET_REVIEW.md`](docs/WALLET_ASSET_REVIEW.md).
+
+[Injective USDC](docs/INJECTIVE_USDC.md) is included alongside Noble USDC: both Terra Classic
+IBC representations have default visibility. Injective USDC is also visible on Injective;
+Noble remains a hidden provenance-only source.
+
+The catalog also includes [Wrapped SP500 xStock (wSPYx)](docs/WSPYX.md) on Terra Classic
+as an optional asset, with its Ethereum wSPYx V2 collateral and Hyperlane provenance.
+Public identity and router enrollment were checked; successful bridge transfers remain unverified.
 
 ## Validation
 

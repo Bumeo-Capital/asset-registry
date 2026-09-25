@@ -34,7 +34,9 @@
         "https://terra-classic-lcd.publicnode.com/ibc/core/channel/v1/channels/channel-113/ports/transfer",
         "https://terra-classic-lcd.publicnode.com/ibc/core/connection/v1/connections/connection-164"
       ],
-      "sourceIds": ["terra-classic-onchain-2026-09-22"]
+      "sourceIds": [
+        "terra-classic-onchain-2026-09-22"
+      ]
     },
     {
       "id": "ibc/osmosis-terra-classic/channel-72-channel-1",
@@ -62,6 +64,18 @@
         {
           "sourceRepresentation": "osmosis/allbtc",
           "destinationRepresentation": "terra-classic/ibc-osmosis-allbtc"
+        },
+        {
+          "sourceRepresentation": "osmosis/uosmo",
+          "destinationRepresentation": "terra-classic/ibc-osmo"
+        },
+        {
+          "sourceRepresentation": "terra-classic/uluna",
+          "destinationRepresentation": "osmosis/ibc-lunc"
+        },
+        {
+          "sourceRepresentation": "terra-classic/uusd",
+          "destinationRepresentation": "osmosis/ibc-ustc"
         }
       ],
       "evidenceUrls": [
@@ -69,7 +83,272 @@
         "https://terra-classic-lcd.publicnode.com/ibc/core/channel/v1/channels/channel-1/ports/transfer",
         "https://terra-classic-lcd.publicnode.com/ibc/core/connection/v1/connections/connection-11"
       ],
-      "sourceIds": ["terra-classic-onchain-2026-09-22"]
+      "sourceIds": [
+        "terra-classic-onchain-2026-09-22",
+        "multichain-onchain-2026-09-25",
+        "product-owner-multichain-2026-09-25"
+      ]
+    },
+    {
+      "id": "hyperlane/ethereum-terra-classic/wspyx-v2",
+      "protocol": "hyperlane",
+      "lifecycle": "active",
+      "endpoints": [
+        {
+          "chain": "ethereum",
+          "endpointType": "hyperlane",
+          "domain": 1,
+          "router": "0x38bd8910dA4F55654173297b27F5D87294CFbD96",
+          "tokenIdentifier": "0xe7e553cd128f0011777323a0b44a7b96ea1cb540"
+        },
+        {
+          "chain": "terra-classic",
+          "endpointType": "hyperlane",
+          "domain": 132556,
+          "router": "terra1457gshlrfmzrp69lh3v06qdp3rq8rk0vxfw2974g0ryw5sn4pa2s8tk0tq",
+          "tokenIdentifier": "terra1wjyvzdrc7pmfemy3ycpnht83trxvccu4ecg7ek0hzf5nt49s8ssqmdldjl"
+        }
+      ],
+      "assetMappings": [
+        {
+          "sourceRepresentation": "ethereum/erc20-wspyx-v2",
+          "destinationRepresentation": "terra-classic/cw20-wspyx"
+        }
+      ],
+      "evidenceUrls": [
+        "https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1wjyvzdrc7pmfemy3ycpnht83trxvccu4ecg7ek0hzf5nt49s8ssqmdldjl/smart/eyJ0b2tlbl9pbmZvIjp7fX0=",
+        "https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1457gshlrfmzrp69lh3v06qdp3rq8rk0vxfw2974g0ryw5sn4pa2s8tk0tq/smart/eyJyb3V0ZXIiOnsiZ2V0X3JvdXRlIjp7ImRvbWFpbiI6MX19fQ==",
+        "https://ethereum-rpc.publicnode.com"
+      ],
+      "sourceIds": [
+        "wspyx-onchain-2026-09-22"
+      ]
+    },
+    {
+      "id": "ibc/injective-terra-classic/channel-497-channel-143",
+      "protocol": "ibc",
+      "lifecycle": "active",
+      "endpoints": [
+        {
+          "chain": "injective",
+          "endpointType": "ibc",
+          "port": "transfer",
+          "channel": "channel-497",
+          "connection": "connection-376",
+          "client": "07-tendermint-357"
+        },
+        {
+          "chain": "terra-classic",
+          "endpointType": "ibc",
+          "port": "transfer",
+          "channel": "channel-143",
+          "connection": "connection-182",
+          "client": "07-tendermint-293"
+        }
+      ],
+      "assetMappings": [
+        {
+          "sourceRepresentation": "injective/erc20-usdc",
+          "destinationRepresentation": "terra-classic/ibc-injective-usdc"
+        },
+        {
+          "sourceRepresentation": "injective/inj",
+          "destinationRepresentation": "terra-classic/ibc-inj"
+        }
+      ],
+      "evidenceUrls": [
+        "https://terra-classic-lcd.publicnode.com/ibc/core/channel/v1/channels/channel-143/ports/transfer",
+        "https://terra-classic-lcd.publicnode.com/ibc/core/connection/v1/connections/connection-182",
+        "https://sentry.lcd.injective.network/ibc/core/channel/v1/channels/channel-497/ports/transfer",
+        "https://sentry.lcd.injective.network/cosmos/bank/v1beta1/denoms_metadata/erc20%3A0xa00C59fF5a080D2b954d0c75e46E22a0c371235a",
+        "https://sentry.lcd.injective.network/ibc/core/connection/v1/connections/connection-376",
+        "https://terra-classic-lcd.publicnode.com/ibc/core/client/v1/client_states/07-tendermint-293",
+        "https://sentry.lcd.injective.network/ibc/core/client/v1/client_states/07-tendermint-357",
+        "https://terra-classic-lcd.publicnode.com/cosmos/bank/v1beta1/denoms_metadata/ibc%2FF52112392095A6D6D1B17EF1FE19BE0B39B2A79B8A2B2F55CD721FC7DBF5081F"
+      ],
+      "sourceIds": [
+        "injective-usdc-onchain-2026-09-22",
+        "multichain-onchain-2026-09-25",
+        "product-owner-multichain-2026-09-25"
+      ]
+    },
+    {
+      "id": "ibc/terra-classic-osmosis/channel-108-channel-78488",
+      "protocol": "ibc",
+      "lifecycle": "active",
+      "endpoints": [
+        {
+          "chain": "terra-classic",
+          "endpointType": "ibc",
+          "port": "wasm.terra19pfxzj9580h7rjd6z6sn5x2se76vgrc0etltr79g9z3t82jzp4hq63qguc",
+          "channel": "channel-108",
+          "connection": "connection-11",
+          "client": "07-tendermint-12"
+        },
+        {
+          "chain": "osmosis",
+          "endpointType": "ibc",
+          "port": "transfer",
+          "channel": "channel-78488",
+          "connection": "connection-1215",
+          "client": "07-tendermint-1549"
+        }
+      ],
+      "assetMappings": [
+        {
+          "sourceRepresentation": "terra-classic/cw20-juris",
+          "destinationRepresentation": "osmosis/ibc-juris"
+        }
+      ],
+      "evidenceUrls": [
+        "https://osmosis-rest.publicnode.com/ibc/apps/transfer/v1/denom_traces/46579C587A0B8CF8B0A1FF6B0EFA2082F11876578E47FC81A9CAAD31F424AF98",
+        "https://osmosis-rest.publicnode.com/ibc/core/channel/v1/channels/channel-78488/ports/transfer",
+        "https://terra-classic-lcd.publicnode.com/ibc/core/channel/v1/channels/channel-108/ports/wasm.terra19pfxzj9580h7rjd6z6sn5x2se76vgrc0etltr79g9z3t82jzp4hq63qguc"
+      ],
+      "sourceIds": [
+        "multichain-onchain-2026-09-25",
+        "product-owner-multichain-2026-09-25"
+      ]
+    },
+    {
+      "id": "hyperlane/terra-classic-ethereum/lunc",
+      "protocol": "hyperlane",
+      "lifecycle": "active",
+      "endpoints": [
+        {
+          "chain": "terra-classic",
+          "endpointType": "hyperlane",
+          "domain": 132556,
+          "router": "terra1m7jcqxfn4hd7q4sywhw508nxshaf078c4vh83y0ts43y9tlp9dcs50cggy",
+          "tokenIdentifier": "uluna"
+        },
+        {
+          "chain": "ethereum",
+          "endpointType": "hyperlane",
+          "domain": 1,
+          "router": "0xA4bc47a4C5461eB0E59A585a21A1222EF7544Ac6",
+          "tokenIdentifier": "0xA4bc47a4C5461eB0E59A585a21A1222EF7544Ac6"
+        }
+      ],
+      "assetMappings": [
+        {
+          "sourceRepresentation": "terra-classic/uluna",
+          "destinationRepresentation": "ethereum/erc20-lunc"
+        }
+      ],
+      "evidenceUrls": [
+        "https://ethereum-rpc.publicnode.com",
+        "https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1m7jcqxfn4hd7q4sywhw508nxshaf078c4vh83y0ts43y9tlp9dcs50cggy/smart/eyJyb3V0ZXIiOnsiZ2V0X3JvdXRlIjp7ImRvbWFpbiI6MX19fQ=="
+      ],
+      "sourceIds": [
+        "multichain-onchain-2026-09-25",
+        "product-owner-multichain-2026-09-25"
+      ]
+    },
+    {
+      "id": "hyperlane/terra-classic-bsc/lunc",
+      "protocol": "hyperlane",
+      "lifecycle": "active",
+      "endpoints": [
+        {
+          "chain": "terra-classic",
+          "endpointType": "hyperlane",
+          "domain": 132556,
+          "router": "terra1m7jcqxfn4hd7q4sywhw508nxshaf078c4vh83y0ts43y9tlp9dcs50cggy",
+          "tokenIdentifier": "uluna"
+        },
+        {
+          "chain": "bsc",
+          "endpointType": "hyperlane",
+          "domain": 56,
+          "router": "0x481095ecEd7A907e7f390b6226F53a66D379e6e2",
+          "tokenIdentifier": "0x481095ecEd7A907e7f390b6226F53a66D379e6e2"
+        }
+      ],
+      "assetMappings": [
+        {
+          "sourceRepresentation": "terra-classic/uluna",
+          "destinationRepresentation": "bsc/erc20-lunc"
+        }
+      ],
+      "evidenceUrls": [
+        "https://bsc-rpc.publicnode.com",
+        "https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1m7jcqxfn4hd7q4sywhw508nxshaf078c4vh83y0ts43y9tlp9dcs50cggy/smart/eyJyb3V0ZXIiOnsiZ2V0X3JvdXRlIjp7ImRvbWFpbiI6NTZ9fX0="
+      ],
+      "sourceIds": [
+        "multichain-onchain-2026-09-25",
+        "product-owner-multichain-2026-09-25"
+      ]
+    },
+    {
+      "id": "hyperlane/terra-classic-ethereum/ustc",
+      "protocol": "hyperlane",
+      "lifecycle": "active",
+      "endpoints": [
+        {
+          "chain": "terra-classic",
+          "endpointType": "hyperlane",
+          "domain": 132556,
+          "router": "terra1qu3x6vhk4y6w6erhmedzfp2ug53qm5nwpyarxveqa7tvwg0telxqvd3ccf",
+          "tokenIdentifier": "uusd"
+        },
+        {
+          "chain": "ethereum",
+          "endpointType": "hyperlane",
+          "domain": 1,
+          "router": "0xf49408beb319aeCe3E8B3550a5C750C19b3F1e51",
+          "tokenIdentifier": "0xf49408beb319aeCe3E8B3550a5C750C19b3F1e51"
+        }
+      ],
+      "assetMappings": [
+        {
+          "sourceRepresentation": "terra-classic/uusd",
+          "destinationRepresentation": "ethereum/erc20-ustc"
+        }
+      ],
+      "evidenceUrls": [
+        "https://ethereum-rpc.publicnode.com",
+        "https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1qu3x6vhk4y6w6erhmedzfp2ug53qm5nwpyarxveqa7tvwg0telxqvd3ccf/smart/eyJyb3V0ZXIiOnsiZ2V0X3JvdXRlIjp7ImRvbWFpbiI6MX19fQ=="
+      ],
+      "sourceIds": [
+        "multichain-onchain-2026-09-25",
+        "product-owner-multichain-2026-09-25"
+      ]
+    },
+    {
+      "id": "hyperlane/terra-classic-bsc/ustc",
+      "protocol": "hyperlane",
+      "lifecycle": "active",
+      "endpoints": [
+        {
+          "chain": "terra-classic",
+          "endpointType": "hyperlane",
+          "domain": 132556,
+          "router": "terra1qu3x6vhk4y6w6erhmedzfp2ug53qm5nwpyarxveqa7tvwg0telxqvd3ccf",
+          "tokenIdentifier": "uusd"
+        },
+        {
+          "chain": "bsc",
+          "endpointType": "hyperlane",
+          "domain": 56,
+          "router": "0xfC067fd98FD123fC2cAd72d040AF60a523274339",
+          "tokenIdentifier": "0xfC067fd98FD123fC2cAd72d040AF60a523274339"
+        }
+      ],
+      "assetMappings": [
+        {
+          "sourceRepresentation": "terra-classic/uusd",
+          "destinationRepresentation": "bsc/erc20-ustc"
+        }
+      ],
+      "evidenceUrls": [
+        "https://bsc-rpc.publicnode.com",
+        "https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1qu3x6vhk4y6w6erhmedzfp2ug53qm5nwpyarxveqa7tvwg0telxqvd3ccf/smart/eyJyb3V0ZXIiOnsiZ2V0X3JvdXRlIjp7ImRvbWFpbiI6NTZ9fX0="
+      ],
+      "sourceIds": [
+        "multichain-onchain-2026-09-25",
+        "product-owner-multichain-2026-09-25"
+      ]
     }
   ]
 }

@@ -1,0 +1,150 @@
+{
+  "observedAt": "2026-09-22T18:59:52.325941+00:00",
+  "queries": [
+    {
+      "url": "https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1wjyvzdrc7pmfemy3ycpnht83trxvccu4ecg7ek0hzf5nt49s8ssqmdldjl/smart/eyJ0b2tlbl9pbmZvIjp7fX0=",
+      "response": {
+        "data": {
+          "name": "Wrapped SP500 xStock",
+          "symbol": "wSPYx",
+          "decimals": 18,
+          "total_supply": "0"
+        }
+      }
+    },
+    {
+      "url": "https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1wjyvzdrc7pmfemy3ycpnht83trxvccu4ecg7ek0hzf5nt49s8ssqmdldjl/smart/eyJtaW50ZXIiOnt9fQ==",
+      "response": {
+        "data": {
+          "minter": "terra1457gshlrfmzrp69lh3v06qdp3rq8rk0vxfw2974g0ryw5sn4pa2s8tk0tq",
+          "cap": null
+        }
+      }
+    },
+    {
+      "url": "https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1457gshlrfmzrp69lh3v06qdp3rq8rk0vxfw2974g0ryw5sn4pa2s8tk0tq/smart/eyJyb3V0ZXIiOnsiZ2V0X3JvdXRlIjp7ImRvbWFpbiI6MX19fQ==",
+      "response": {
+        "data": {
+          "route": {
+            "domain": 1,
+            "route": "00000000000000000000000038bd8910da4f55654173297b27f5d87294cfbd96"
+          }
+        }
+      }
+    },
+    {
+      "url": "https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1457gshlrfmzrp69lh3v06qdp3rq8rk0vxfw2974g0ryw5sn4pa2s8tk0tq/smart/eyJ0b2tlbl9kZWZhdWx0Ijp7InRva2VuX21vZGUiOnt9fX0=",
+      "response": {
+        "data": {
+          "mode": "bridged"
+        }
+      }
+    },
+    {
+      "url": "https://terra-classic-lcd.publicnode.com/cosmwasm/wasm/v1/contract/terra1457gshlrfmzrp69lh3v06qdp3rq8rk0vxfw2974g0ryw5sn4pa2s8tk0tq/smart/eyJ0b2tlbl9kZWZhdWx0Ijp7InRva2VuX3R5cGUiOnt9fX0=",
+      "response": {
+        "data": {
+          "type": {
+            "c_w20": {
+              "contract": "terra1wjyvzdrc7pmfemy3ycpnht83trxvccu4ecg7ek0hzf5nt49s8ssqmdldjl"
+            }
+          }
+        }
+      }
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_blockNumber",
+        "params": []
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "result": "0x18d431a",
+        "id": 1
+      }
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_call",
+        "params": [
+          {
+            "to": "0x38bd8910dA4F55654173297b27F5D87294CFbD96",
+            "data": "0xfc0c546a"
+          },
+          "0x18d431a"
+        ]
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": "0x000000000000000000000000e7e553cd128f0011777323a0b44a7b96ea1cb540"
+      }
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_call",
+        "params": [
+          {
+            "to": "0xe7e553cd128f0011777323a0b44a7b96ea1cb540",
+            "data": "0x313ce567"
+          },
+          "0x18d431a"
+        ]
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+      }
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_call",
+        "params": [
+          {
+            "to": "0xe7e553cd128f0011777323a0b44a7b96ea1cb540",
+            "data": "0x95d89b41"
+          },
+          "0x18d431a"
+        ]
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000057753505978000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "url": "https://ethereum-rpc.publicnode.com",
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_call",
+        "params": [
+          {
+            "to": "0x38bd8910dA4F55654173297b27F5D87294CFbD96",
+            "data": "0x2ead72f600000000000000000000000000000000000000000000000000000000000205cc"
+          },
+          "0x18d431a"
+        ]
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": "0xad3c885fe34ec430e8bfbc58fd01a188c071d9ec325ca2faa878c8ea42750f55"
+      }
+    }
+  ]
+}

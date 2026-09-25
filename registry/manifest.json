@@ -6,10 +6,33 @@
   "files": [
     "registry/chains.json",
     "registry/canonical-assets.json",
+    "registry/entities.json",
+    "registry/asset-groups.json",
     "registry/representations.json",
     "registry/connections.json"
   ],
   "sources": [
+    {
+      "id": "backed-spyx-product-2026-09-25",
+      "kind": "official-documentation",
+      "url": "https://assets.backed.fi/products/sp500-xstock",
+      "asOf": "2026-09-25",
+      "note": "Backed identifies SP500 xStock as a tracker certificate referencing SPDR S&P 500 ETF Trust and names Backed Assets (JE) Limited as issuer."
+    },
+    {
+      "id": "xstocks-product-site-2026-09-25",
+      "kind": "official-documentation",
+      "url": "https://www.xstocks.fi",
+      "asOf": "2026-09-25",
+      "note": "Official xStocks product site identifying the xStocks brand and the relevant Payward offerors by region."
+    },
+    {
+      "id": "kraken-xstocks-disclosure-2026-09-25",
+      "kind": "official-documentation",
+      "url": "https://www.kraken.com/legal/xstocks",
+      "asOf": "2026-09-25",
+      "note": "Kraken disclosure states that xStocks are issued by Backed Assets (JE) Limited and offered to eligible Kraken clients by the applicable Payward entity."
+    },
     {
       "id": "wspyx-onchain-2026-09-22",
       "kind": "onchain-query",

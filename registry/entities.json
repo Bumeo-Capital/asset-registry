@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "entities": [
+    {
+      "id": "backed-assets-je",
+      "name": "Backed Assets (JE) Limited",
+      "kind": "organization",
+      "website": "https://assets.backed.fi",
+      "sourceIds": ["backed-spyx-product-2026-09-25"]
+    },
+    {
+      "id": "xstocks",
+      "name": "xStocks",
+      "kind": "brand",
+      "website": "https://www.xstocks.fi",
+      "sourceIds": ["xstocks-product-site-2026-09-25"]
+    },
+    {
+      "id": "payward-digital-solutions",
+      "name": "Payward Digital Solutions Ltd.",
+      "kind": "organization",
+      "website": "https://www.xstocks.fi",
+      "sourceIds": [
+        "xstocks-product-site-2026-09-25",
+        "kraken-xstocks-disclosure-2026-09-25"
+      ]
+    },
+    {
+      "id": "payward-europe-digital-solutions-cy",
+      "name": "Payward Europe Digital Solutions (CY) Ltd.",
+      "kind": "organization",
+      "website": "https://www.xstocks.fi",
+      "sourceIds": [
+        "xstocks-product-site-2026-09-25",
+        "kraken-xstocks-disclosure-2026-09-25"
+      ]
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken",
+      "kind": "platform",
+      "website": "https://www.kraken.com/xstocks",
+      "sourceIds": ["kraken-xstocks-disclosure-2026-09-25"]
+    }
+  ]
+}

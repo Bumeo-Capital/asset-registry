@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "sp500-etf-exposure",
+      "kind": "market-exposure",
+      "name": "S&P 500 ETF exposure",
+      "description": "Assets designed to track an instrument that provides S&P 500 ETF exposure.",
+      "memberAssets": ["wspyx"],
+      "sourceIds": ["backed-spyx-product-2026-09-25"]
+    },
+    {
+      "id": "xstocks-products",
+      "kind": "product-family",
+      "name": "xStocks",
+      "description": "Tokenized products distributed under the xStocks brand.",
+      "memberAssets": ["wspyx"],
+      "associations": [
+        {
+          "role": "issuer",
+          "entity": "backed-assets-je",
+          "sourceIds": [
+            "backed-spyx-product-2026-09-25",
+            "kraken-xstocks-disclosure-2026-09-25"
+          ]
+        },
+        {
+          "role": "brand",
+          "entity": "xstocks",
+          "sourceIds": ["xstocks-product-site-2026-09-25"]
+        },
+        {
+          "role": "offeror-outside-eea",
+          "entity": "payward-digital-solutions",
+          "sourceIds": [
+            "xstocks-product-site-2026-09-25",
+            "kraken-xstocks-disclosure-2026-09-25"
+          ]
+        },
+        {
+          "role": "offeror-eea",
+          "entity": "payward-europe-digital-solutions-cy",
+          "sourceIds": [
+            "xstocks-product-site-2026-09-25",
+            "kraken-xstocks-disclosure-2026-09-25"
+          ]
+        },
+        {
+          "role": "platform",
+          "entity": "kraken",
+          "sourceIds": ["kraken-xstocks-disclosure-2026-09-25"]
+        }
+      ],
+      "sourceIds": [
+        "backed-spyx-product-2026-09-25",
+        "xstocks-product-site-2026-09-25",
+        "kraken-xstocks-disclosure-2026-09-25"
+      ]
+    }
+  ]
+}

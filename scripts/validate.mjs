@@ -48,10 +48,20 @@ export const validateRegistry = (root = DEFAULT_ROOT) => {
   const manifest = readJson(root, 'registry/manifest.json');
   const chainFile = readJson(root, 'registry/chains.json');
   const assetFile = readJson(root, 'registry/canonical-assets.json');
+  const entityFile = readJson(root, 'registry/entities.json');
+  const assetGroupFile = readJson(root, 'registry/asset-groups.json');
   const representationFile = readJson(root, 'registry/representations.json');
   const connectionFile = readJson(root, 'registry/connections.json');
 
-  for (const [name, data] of Object.entries({ manifest, chainFile, assetFile, representationFile, connectionFile })) {
+  for (const [name, data] of Object.entries({
+    manifest,
+    chainFile,
+    assetFile,
+    entityFile,
+    assetGroupFile,
+    representationFile,
+    connectionFile
+  })) {
     invariant(data.schemaVersion === 1, `${name}: unsupported schemaVersion`);
   }
 
@@ -62,6 +72,8 @@ export const validateRegistry = (root = DEFAULT_ROOT) => {
   const sources = indexUnique(manifest.sources, 'sources');
   const chains = indexUnique(chainFile.chains, 'chains');
   const assets = indexUnique(assetFile.assets, 'canonical assets');
+  const entities = indexUnique(entityFile.entities, 'entities');
+  const assetGroups = indexUnique(assetGroupFile.groups, 'asset groups');
   const representations = indexUnique(representationFile.representations, 'representations');
   const connections = indexUnique(connectionFile.connections, 'connections');
 
@@ -72,6 +84,28 @@ export const validateRegistry = (root = DEFAULT_ROOT) => {
   for (const asset of assets.values()) {
     invariant(lifecycleValues.has(asset.lifecycle), `canonical asset ${asset.id}: invalid lifecycle`);
     invariant(existsSync(repositoryPath(root, asset.logo, `canonical asset ${asset.id} logo`)), `canonical asset ${asset.id}: missing logo ${asset.logo}`);
+  }
+
+  const entityKinds = new Set(['organization', 'brand', 'platform', 'protocol']);
+  for (const entity of entities.values()) {
+    invariant(entityKinds.has(entity.kind), `entity ${entity.id}: invalid kind`);
+    validateSourceRefs(entity, sources, `entity ${entity.id}`);
+  }
+
+  const groupKinds = new Set(['market-exposure', 'product-family', 'protocol-ecosystem']);
+  for (const group of assetGroups.values()) {
+    invariant(groupKinds.has(group.kind), `asset group ${group.id}: invalid kind`);
+    validateSourceRefs(group, sources, `asset group ${group.id}`);
+    invariant(Array.isArray(group.memberAssets) && group.memberAssets.length > 0, `asset group ${group.id}: missing memberAssets`);
+    invariant(new Set(group.memberAssets).size === group.memberAssets.length, `asset group ${group.id}: duplicate memberAssets`);
+    for (const assetId of group.memberAssets) {
+      invariant(assets.has(assetId), `asset group ${group.id}: unknown canonical asset ${assetId}`);
+    }
+    for (const association of group.associations ?? []) {
+      invariant(typeof association.role === 'string' && /^[a-z0-9-]+$/.test(association.role), `asset group ${group.id}: invalid association role`);
+      invariant(entities.has(association.entity), `asset group ${group.id}: unknown entity ${association.entity}`);
+      validateSourceRefs(association, sources, `asset group ${group.id} association ${association.role}`);
+    }
   }
 
   for (const chain of chains.values()) {
@@ -132,7 +166,10 @@ export const validateRegistry = (root = DEFAULT_ROOT) => {
       invariant(source, `connection ${connection.id}: unknown source representation ${mapping.sourceRepresentation}`);
       invariant(destination, `connection ${connection.id}: unknown destination representation ${mapping.destinationRepresentation}`);
       invariant(source.canonicalAsset === destination.canonicalAsset, `connection ${connection.id}: mapping crosses canonical assets`);
-      invariant(destination.provenance?.some((entry) => entry.originRepresentation === source.id && entry.transportRef === connection.id), `connection ${connection.id}: destination provenance mismatch`);
+      invariant(
+        destination.provenance?.some((entry) => entry.originRepresentation === source.id && entry.transportRef === connection.id),
+        `connection ${connection.id}: destination provenance mismatch`
+      );
     }
   }
 
@@ -154,6 +191,8 @@ export const validateRegistry = (root = DEFAULT_ROOT) => {
   return {
     chains: chains.size,
     canonicalAssets: assets.size,
+    entities: entities.size,
+    assetGroups: assetGroups.size,
     representations: representations.size,
     connections: connections.size,
     dexRepresentations: manifest.sources.find((source) => source.kind === 'api-snapshot')?.tokenCount ?? 0
@@ -164,7 +203,9 @@ const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(imp
 if (isMain) {
   try {
     const counts = validateRegistry(process.argv[2] ? resolve(process.argv[2]) : DEFAULT_ROOT);
-    console.log(`Registry valid: ${counts.chains} chains, ${counts.canonicalAssets} canonical assets, ${counts.representations} representations, ${counts.connections} connections, ${counts.dexRepresentations} DEX assets.`);
+    console.log(
+      `Registry valid: ${counts.chains} chains, ${counts.canonicalAssets} canonical assets, ${counts.entities} entities, ${counts.assetGroups} asset groups, ${counts.representations} representations, ${counts.connections} connections, ${counts.dexRepresentations} DEX assets.`
+    );
   } catch (error) {
     console.error(`Registry invalid: ${error.message}`);
     process.exitCode = 1;

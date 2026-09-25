@@ -7,10 +7,18 @@
   "required": ["schemaVersion", "registryVersion", "status", "updatedAt", "files", "sources"],
   "properties": {
     "schemaVersion": { "const": 1 },
-    "registryVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "registryVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
     "status": { "enum": ["initial", "stable", "deprecated"] },
     "updatedAt": { "type": "string", "format": "date" },
-    "files": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } },
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    },
     "sources": {
       "type": "array",
       "minItems": 1,
@@ -19,13 +27,19 @@
         "required": ["id", "kind"],
         "properties": {
           "id": { "type": "string", "minLength": 1 },
-          "kind": { "enum": ["api-snapshot", "repository-snapshot", "onchain-query", "product-decision"] },
+          "kind": {
+            "enum": ["api-snapshot", "repository-snapshot", "onchain-query", "official-documentation", "product-decision"]
+          },
           "url": { "type": "string" },
           "asOf": { "type": "string" },
           "repository": { "type": "string" },
           "commit": { "type": "string" },
           "tokenCount": { "type": "integer", "minimum": 0 },
-          "representationIds": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+          "representationIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string" }
+          },
           "note": { "type": "string" }
         }
       }

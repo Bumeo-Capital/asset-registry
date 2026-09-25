@@ -1,0 +1,23 @@
+{
+  "name": "@bumeo-capital/asset-registry",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./canonical-assets": "./registry/canonical-assets.json",
+    "./representations": "./registry/representations.json",
+    "./asset-groups": "./registry/asset-groups.json",
+    "./entities": "./registry/entities.json",
+    "./images/*": "./images/*"
+  },
+  "files": [
+    "src",
+    "registry",
+    "images",
+    "README.md"
+  ]
+}

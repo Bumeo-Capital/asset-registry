@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Bumeo-Capital/asset-registry/main/schemas/asset-groups.schema.json",
+  "title": "Bumeo asset registry groups",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "groups"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "kind", "name", "memberAssets", "sourceIds"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "kind": {
+            "enum": ["market-exposure", "product-family", "protocol-ecosystem"]
+          },
+          "name": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 },
+          "memberAssets": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string" }
+          },
+          "associations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["role", "entity", "sourceIds"],
+              "properties": {
+                "role": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+                "entity": { "type": "string", "minLength": 1 },
+                "sourceIds": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          },
+          "sourceIds": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

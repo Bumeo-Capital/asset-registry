@@ -5,17 +5,17 @@ Public chain queries on September 22, 2026 verified the identities below.
 The source responses and Ethereum RPC call data are preserved in
 [the evidence snapshot](evidence/wspyx-2026-09-22.json).
 
-| Field | Value |
-| --- | --- |
-| Canonical asset | `wspyx` |
-| Terra Classic name / symbol | Wrapped SP500 xStock / `wSPYx` |
-| Terra Classic CW20 | `terra1wjyvzdrc7pmfemy3ycpnht83trxvccu4ecg7ek0hzf5nt49s8ssqmdldjl` |
-| Ethereum collateral (wSPYx V2) | `0xe7e553cd128f0011777323a0b44a7b96ea1cb540` |
-| Decimals | 18 on both chains |
+| Field                            | Value                                                              |
+| -------------------------------- | ------------------------------------------------------------------ |
+| Canonical asset                  | `wspyx`                                                            |
+| Terra Classic name / symbol      | Wrapped SP500 xStock / `wSPYx`                                     |
+| Terra Classic CW20               | `terra1wjyvzdrc7pmfemy3ycpnht83trxvccu4ecg7ek0hzf5nt49s8ssqmdldjl` |
+| Ethereum collateral (wSPYx V2)   | `0xe7e553cd128f0011777323a0b44a7b96ea1cb540`                       |
+| Decimals                         | 18 on both chains                                                  |
 | Terra Classic Warp / CW20 minter | `terra1457gshlrfmzrp69lh3v06qdp3rq8rk0vxfw2974g0ryw5sn4pa2s8tk0tq` |
-| Ethereum router | `0x38bd8910dA4F55654173297b27F5D87294CFbD96` |
-| Hyperlane domains | Ethereum `1`, Terra Classic `132556` |
-| Visibility | Terra Classic `optional`; Ethereum `hidden` for provenance |
+| Ethereum router                  | `0x38bd8910dA4F55654173297b27F5D87294CFbD96`                       |
+| Hyperlane domains                | Ethereum `1`, Terra Classic `132556`                               |
+| Visibility                       | Terra Classic `optional`; Ethereum `hidden` for provenance         |
 
 Terra's Warp reports bridged mode and the exact CW20 above. Its domain-1 route
 matches the Ethereum router. Ethereum `token()` returns the collateral above;
@@ -26,6 +26,11 @@ were made against latest state and are not an atomic block snapshot.
 
 The economic identity here is the wrapped collateral wSPYx, not unwrapped SPYx.
 No representation of unwrapped SPYx is added or treated as interchangeable.
+The broader context is modeled separately: wSPYx belongs to the `sp500-etf-exposure` market group
+and the `xstocks-products` product family. Official disclosures identify Backed Assets (JE)
+Limited as the xStocks issuer, xStocks as the product brand, the applicable Payward entity as the
+regional offeror, and Kraken as a platform. Payward and Kraken are therefore not mislabeled as the
+issuer.
 The owner selected the official SPYx product logo for this wrapped representation.
 It was downloaded unchanged from the [issuer product page](https://assets.backed.fi/products/sp500-xstock)
 on September 22, 2026: [original PNG](https://cdn.prod.website-files.com/655f3efc4be468487052e35a/6a9865b36967fd31d0415ecf_SPYx.png).

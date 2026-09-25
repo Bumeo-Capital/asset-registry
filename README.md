@@ -2,12 +2,14 @@
 
 Public chain and asset metadata shared by LSF products.
 
-The registry separates four concepts that must not be collapsed:
+The registry separates six concepts that must not be collapsed:
 
 1. **Canonical assets** describe the economic asset people recognize, such as USDC.
 2. **Representations** describe an exact denom, contract, or mint on one chain.
 3. **Connections** describe how a representation originated or can move between chains.
-4. **Product policy** decides what a product displays or executes. It remains outside this repo.
+4. **Asset groups** connect distinct assets by market exposure, product family, or protocol ecosystem.
+5. **Entities** identify issuers, brands, platforms, and protocols without pretending they are assets.
+6. **Product policy** decides what a product displays or executes. It remains outside this repo.
 
 Grouping two representations under one canonical asset is a display relationship. It does not make
 them interchangeable and does not authorize a swap, send, bridge, or signature.
@@ -19,6 +21,8 @@ registry/
   manifest.json          source snapshots and registry files
   chains.json            chain identities and native representations
   canonical-assets.json  chain-independent asset identities
+  entities.json          organizations, brands, platforms, and protocols
+  asset-groups.json      market exposure and product-family relationships
   representations.json   exact chain-local asset identities
   connections.json       IBC and, after approval, other bridge provenance
 schemas/                  JSON Schemas for the source files
@@ -75,6 +79,9 @@ Noble remains a hidden provenance-only source.
 The catalog also includes [Wrapped SP500 xStock (wSPYx)](docs/WSPYX.md) on Terra Classic
 as an optional asset, with its Ethereum wSPYx V2 collateral and Hyperlane provenance.
 Public identity and router enrollment were checked; successful bridge transfers remain unverified.
+It belongs to the `S&P 500 ETF exposure` and `xStocks` groups. The registry records Backed Assets
+(JE) Limited as issuer, xStocks as brand, the applicable Payward companies as offerors, and Kraken
+as a platform. Those roles are deliberately not collapsed into a single `issuer` field.
 
 ## Validation
 
@@ -87,6 +94,13 @@ node --test scripts/validate.test.mjs
 
 Validation checks unique IDs, references, canonical grouping, source evidence, bridge mappings,
 logos, required chain-native representations, and complete coverage of the recorded DEX snapshot.
+
+## Package consumption
+
+The repository is also a zero-build package. Consumers may import registry records and lookup
+helpers from `@bumeo-capital/asset-registry`, or import reviewed assets through the
+`@bumeo-capital/asset-registry/images/*` export. Production consumers must pin a reviewed commit
+or release; local development may link this repository directly.
 
 ## Adding data
 
